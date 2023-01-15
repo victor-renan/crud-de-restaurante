@@ -28,25 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
             preco.className = "prato__preco";
             preco.innerHTML = "R$" + elemento.preco;
 
-            let btn = document.createElement("button");
-            btn.innerHTML = "Comprar";
-            btn.className = "prato__btn";
+            let comprarBtn = document.createElement("button");
+            comprarBtn.innerHTML = "Comprar";
+            comprarBtn.className = "prato__btn";
 
-            let button = document.createElement("but");
-            button.innerHTML = "Deletar";
-            button.className = "prato__delete";
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = "Deletar";
+            deleteBtn.className = "prato__delete";
             
-            document.querySelector(".prato__delete");
-            addEventListener("click", () => {
-                res.redirect("deletar/{{id}}")
+            button.addEventListener("click", () => {
+                fetch(`/delete/${elemento.id}`, {
+                    method: "DELETE"
+                })
+                .catch((err) => console.log(err));
             });
 
             let title = document.createElement("h2");
             title.innerHTML = "titulo";
             title.className = "prato_title";
 
-            text.append(nome, descricao, preco,);
-            prato.append(imagem, text, btn, button,);
+            text.append(nome, descricao, preco);
+            prato.append(imagem, text, comprarBtn, deleteBtn);
+            
             document.querySelector("#products-view").append(prato);
         })
     })
