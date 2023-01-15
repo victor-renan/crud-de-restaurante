@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/produtos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="bx bx-fork"></i>Restaurante<br>Hirosz</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="../welcome/">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="../produtos/">Produtos</a></li>
+            <li><a href="#avaliacao">Avaliações</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="profile">
+            <i class="bx bx-cart" id="cart-icon"></i>
+        </div>
+    </header>
+    <main>
+        <h2 class="prato_title"><i class="bx bx-fork"></i>   Crie seu prato</h2>
+        <section id="create">
+            <form class="create__form" action="/api/cardapio/create" method="post">
+                <label class="create__form__label" for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite o nome do prato" required>
+
+                <label class="create__form__label" for="descricao">Descrição:</label>
+                <textarea name="descricao" placeholder="Digite a descrição do prato" required></textarea>
+
+                <label class="create__form__label" for="preco">Preco:</label>
+                <input type="number" name="preco" placeholder="Digite o preço" required>
+
+                <label class="create__form__label" for="imagem">Imagem:</label>
+                <input type="text" name="imagem" placeholder="Digite a URL da imagem" required>
+
+                <input class="create__form__btn" type="submit" value="Criar">
+                
+                
+
+
+            </form>
+        </section>
+        <section id="products">
+            <h2 class="products__title">Cardápio</h2>
+            <div id="products-view">
+            </div>
+        </section>
+    </main>
+    <script src="../js/produtos.js"></script>
+</body>
+</html>

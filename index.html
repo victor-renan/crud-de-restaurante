@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Crud de Lanchonete</title>
+</head>
+<body>
+   
+        <div class="container">
+            <div class="itens-box">
+                <div class="form-box">
+                    <div class="caixa">
+                    <img src="./assets/user-solid.svg" alt="" id="user">
+                    <h1>Login</h1>
+                    <h3> Venha ser feliz no Restaurante Hirosz</h3>
+                    <form id="main-form" action="/" method="POST">
+                        <div class="input-box">
+                            <span>Usuario</span>
+                            <input type="text" name= "username" placeholder="Seu nome de Usuario">
+                        </div>
+                        <div class="input-box">
+                            <span>Senha</span>
+                            <section>
+                            <input type="password" name="password" placeholder="Digite sua Senha" id="senha">
+                            <div id="icons" onclick="showHide()"></div>
+                        </section>
+                        </div>
+                        <div class="input-box">
+                          
+                            <input type="submit" value="Enviar">
+                            <h4 class="cadas">Não tem uma conta? <a href="/cadastro">Cadastre-se</a></h4>
+    
+                        </div>
+                        
+                </div>
+        
+                </div>
+            </div>
+            <div class="img-form">
+                <img src="/assets/asian-hamburger-with-french-fries-and-hot-sauce.jpg" alt="">
+            </div>
+        </div>
+
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
